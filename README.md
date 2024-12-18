@@ -38,10 +38,15 @@ There are two ways to configure the script:
 
 1. In Chrome DevTools (F12):
    - Go to the Network tab
-   - Visit iCloud.com and log in
-   - Look for any request to `icloud.com`
-   - Right-click the request
+   - Visit iCloud.com, click on creating emails
+![image](https://github.com/user-attachments/assets/c175ba4a-736e-4d9d-b9a4-904e527b4d8f)
+   - Click on + button
+![image](https://github.com/user-attachments/assets/9dd9cbcb-9849-414e-b2b6-533d60995114)
+   - See request "generate", click right button on it
+![image](https://github.com/user-attachments/assets/078b1c55-85a5-4aac-a13e-03f346d9c7c7)
    - Select "Copy as cURL" (bash)
+![image](https://github.com/user-attachments/assets/625158f9-dd60-4f46-9da1-2d7194fa55cb)
+
 
 2. Create a file named `headers.curl` and paste the cURL command into it
 
