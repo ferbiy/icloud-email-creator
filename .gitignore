@@ -1,4 +1,6 @@
 config.py
+config.working.py
 email_creator.log
 .venv
 __pycache__
+headers.curl
