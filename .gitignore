@@ -1,0 +1,4 @@
+config.py
+email_creator.log
+.venv
+__pycache__
