@@ -10,6 +10,7 @@ This script automatically generates and reserves iCloud email addresses at regul
 - Comprehensive logging to both console and file
 - Error handling and graceful failure recovery
 - Configurable settings via config file
+- Automatic configuration generation from cURL command
 
 ## Prerequisites
 
@@ -29,17 +30,36 @@ cd icloud-email-generator
 pip install requests
 ```
 
-
 ## Configuration
 
-1. Open `config.py` and update the `COOKIES` dictionary with your iCloud session cookies. To get these:
+There are two ways to configure the script:
 
-   - Open Chrome DevTools (F12)
+### Option 1: Using cURL Command (Recommended)
+
+1. In Chrome DevTools (F12):
    - Go to the Network tab
    - Visit iCloud.com and log in
    - Look for any request to `icloud.com`
-   - In the request headers, find the `Cookie` section
-   - Copy all cookies and add them to the `COOKIES` dictionary in `config.py`
+   - Right-click the request
+   - Select "Copy as cURL" (bash)
+
+2. Create a file named `headers.curl` and paste the cURL command into it
+
+3. Run the configuration generator:
+```bash
+python create_config.py
+```
+
+This will automatically create `config.py` with all necessary settings.
+
+### Option 2: Manual Configuration
+
+1. Copy `config.example.py` to `config.py`:
+```bash
+cp config.example.py config.py
+```
+
+2. Update the `COOKIES` dictionary with your iCloud session cookies from Chrome DevTools
 
 Example cookie format:
 ```python
